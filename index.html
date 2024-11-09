@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captação de Editais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Captação de Editais</h1>
+        
+        <!-- Filtros e Barra de Busca -->
+        <div class="filters">
+            <input type="text" id="search" placeholder="Buscar por palavra-chave..." onkeyup="filterEditais()">
+            <select id="categoryFilter" onchange="filterEditais()">
+                <option value="">Todas as Categorias</option>
+                <option value="Obras">Obras</option>
+                <option value="Serviços">Serviços</option>
+                <option value="Compras">Compras</option>
+            </select>
+            <button onclick="resetFilters()">Limpar Filtros</button>
+        </div>
+        
+        <!-- Tabela de Editais -->
+        <table id="editalTable">
+            <thead>
+                <tr>
+                    <th>Nome do Edital</th>
+                    <th>Órgão</th>
+                    <th>Categoria</th>
+                    <th>Data de Publicação</th>
+                    <th>Prazo</th>
+                </tr>
+            </thead>
+            <tbody id="editalTableBody">
+                <!-- As linhas da tabela serão preenchidas dinamicamente com JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
